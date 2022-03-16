@@ -1,0 +1,59 @@
+<h1>welcome weather detector</h1>
+<form method="POST" action="">
+{% csrf_token %}
+<style>
+    .mydiv{
+        font-size: x-large;
+        font-style:italic;
+        color:black;
+        
+    }
+     h1 {text-align: center;
+        color: blueviolet;
+    } 
+     h2 {font-size: large;
+        color: blueviolet;
+    } 
+    h3 {font-size: large;
+        color: blueviolet;
+    } 
+
+ body{
+     background-image: url('https://media.wired.co.uk/photos/606dba1c9a15f73a597a2aa1/master/w_1600%2Cc_limit/weather.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     text-align: left;
+     
+ 
+}
+
+    
+</style>
+<input type="text" name="serch" placeholder="serch...">
+<input type="submit"><br>
+<input type="radio" name="celsius" value="celsius">
+<label for="celsius">celsius</label>
+<input type="radio" name="farenhit" value="radio2">
+<label for="farenheit">farenheit</label><br>
+
+{{serch}}
+<h2>country code:{{data.country_code}}</h2>
+<h3>temp:{{data.temp}}</h3>
+<div class="mydiv">
+<p>pressure:{{data.pressure}}</p>
+<p>humidity:{{data.humidity}}</p>
+<p>coordinate:{{data.coordinate}}</p>
+<p>temp_min:{{data.temp_min}}</p>
+<p>temp_max:{{data.temp_max}}</p>
+<p>timezone:{{data.timezone}}</p>
+<p>sunrise:{{data.sunrise}}</p>
+<p>description:{{data.description}}</p>
+<p>windspeed:{{data.windspeed}}</p>
+<p>visibility:{{data.visibility}}</p>
+</div>
+
+</form>   
+
+
+
+
